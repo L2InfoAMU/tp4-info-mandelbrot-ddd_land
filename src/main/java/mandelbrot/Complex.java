@@ -205,13 +205,11 @@ public class Complex {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-        if (o == null || getClass() != o.getClass())
-            return false;
-        Complex complex = (Complex) o;
-        return Helpers.doubleCompare(complex.real, real) == 0 ||
-                Helpers.doubleCompare(complex.imaginary, imaginary) == 0;
+        if (o == null || this.getClass() != o.getClass())
+            return false ;
+     Complex complex =(Complex)o;
+     return ((Helpers.doubleCompare(complex.real,this.real) == 0) &&
+            (Helpers.doubleCompare(complex.imaginary,this.imaginary) == 0));
     }
 
     @Override
