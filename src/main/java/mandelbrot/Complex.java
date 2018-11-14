@@ -72,8 +72,7 @@ public class Complex {
      * @param real the real component
      * @return the complex <code>real + 0 i</code>
      */
-    public static Complex real(double real) {
-        return new Complex(0, real);
+    public static Complex real(double real) { return new Complex( real, 0);
     }
 
     /**
