@@ -187,10 +187,21 @@ public class ComplexTest {
     void testPow(){
         Complex c1 = new Complex(3,4);
         Complex c2 = new Complex(-7,24);
-        Complex c3 = new Complex(-9653287,1476984);
+        Complex c3 = new Complex(-9653287,1476984); /*résultat de c1^10 sur internet*/
 
         assertEquals(Complex.ZERO,c1.pow(0));
         assertEquals(c2,c1.pow(2));
         assertEquals(c3,c1.pow(10));
+    }
+    @Test
+    void testScale(){
+        Complex c1 = new Complex (2,2);
+        Complex c2 = new Complex (6,6);
+        Complex c3 = new Complex (-6,-6);
+        assertEquals(Complex.ZERO,c1.scale(0));
+        assertEquals(c1,c1.scale(1));
+        assertEquals(c2,c1.scale(3));
+        assertEquals(c3,c1.scale(-3));
+
     }
 }
