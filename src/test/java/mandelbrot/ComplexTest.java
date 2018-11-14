@@ -183,4 +183,14 @@ public class ComplexTest {
         assertEquals(0,Complex.ZERO.modulus());
         assertEquals(Math.sqrt(41),c2.modulus());
     }
+    @Test
+    void testPow(){
+        Complex c1 = new Complex(3,4);
+        Complex c2 = new Complex(-7,24);
+        Complex c3 = new Complex(-9653287,1476984);
+
+        assertEquals(Complex.ZERO,c1.pow(0));
+        assertEquals(c2,c1.pow(2));
+        assertEquals(c3,c1.pow(10));
+    }
 }
