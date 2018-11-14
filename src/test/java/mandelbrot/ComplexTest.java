@@ -175,4 +175,12 @@ public class ComplexTest {
         assertEquals(52,c1.squaredModulus());
 
     }
+    @Test
+    void testModulus(){
+        Complex c1 = new Complex (2,2);
+        Complex c2 = new Complex (-5,4);
+        assertEquals(Math.sqrt(8),c1.modulus());
+        assertEquals(0,Complex.ZERO.modulus());
+        assertEquals(Math.sqrt(41),c2.modulus());
+    }
 }
